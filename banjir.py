@@ -11,10 +11,13 @@ GangguanCuaca = st.text_input('Gangguan Cuaca')
 Astronomi = st.text_input('Astronomi')   
 
 prediksibanjir = ''
+   
 if st.button('Prediksi Kenaikan Permukaan Laut Terhadap Banjir'):
     prediksibanjir = model.predict([[TinggiLaut, KecepatanAngin, GangguanCuaca, Astronomi]])
-    if (prediksibanjir[0]==1):
+    if prediksibanjir[0] == 1:
         prediksibanjir = 'Terprediksi Kenaikan Permukaan Laut berpotensi Banjir'
     else:
-         prediksibanjir = 'Terprediksi Kenaikan Permukaan Laut berpotensi Banjir'
-st.success(prediksibanjir)    
+        prediksibanjir = 'Tidak Terprediksi Kenaikan Permukaan Laut berpotensi Banjir'
+
+    st.success(prediksibanjir)
+
