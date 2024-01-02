@@ -9,9 +9,7 @@ TinggiLaut = st.text_input('Ketinggian Laut')
 KecepatanAngin = st.text_input('Kecepatan Angin')    
 GangguanCuaca = st.text_input('Gangguan Cuaca')      
 Astronomi = st.text_input('Astronomi')   
-with open('requirements.txt', 'r') as f:
-    class_names = [a[:-1].split(' ')[1] for a in f.readlines()]
-    f.close()
+
 prediksibanjir = ''
    
 if st.button('Prediksi Kenaikan Permukaan Laut Terhadap Banjir'):
